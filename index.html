@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce Ethan himself article by LaiJiaJun</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #d4fc79 0%, #96e6a1 50%, #a8edea 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 24px;
+            text-align: center;
+        }
+        p {
+            margin: 0 0 1em;
+            text-align: justify;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .english-content {
+            display: block;
+        }
+        .chinese-content {
+            display: none;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container english-content">
+        <h1>Introduction Ethan himself</h1>
+        <p>Hello everyone, my Chinese name is Lai Jiajun. I am a middle school student and my hometown is in Sichuan.</p>
+        <p>Although my hometown is in Sichuan, I cannot eat spicy food. I am good at programming. C++, Python, I often use some of the technologies I know about the front-end to do some interesting things.</p>
+        <p>For example, searching for the resources I need in a few seconds. This is the technique of crawling.</p>
+        <p>In my spare time, I can also play the piano. This is just my hobby, because I only know how to play some basic songs, such as those popular songs online like backtracking and night cruising.</p>
+        <p>My studies in class were not very good, but I still worked very hard. My school is not very close to home, so I often take my parents' car to school.</p>
+        <p>That's me, and you?</p>
+        <button id="toggle-button-en">转到中文页面</button>
+    </div>
+
+    <div class="container chinese-content">
+        <h1>自我介绍(由 Laijiajun编写整个网页和文章)</h1>
+        <p>大家好，我的中文名叫赖嘉俊，我是一位中学生，我的家乡在四川。</p>
+        <p>虽然说我的家乡在四川，但是我不能吃辣。我擅长于编程，会C++，Python和前端。</p>
+        <p>我经常用我知道的一些技术做一些有趣的事情。例如几秒钟搜索我需要的资源，这就是爬虫的技术。</p>
+        <p>在闲暇时间里我还会弹钢琴。这只是我业余的，因为我只会弹一些比较基础的，比如网上的那些比较流行的歌曲，比如说溯，nightcrusing之类的。</p>
+        <p>我在班里的学习不是很好，但是我还是很努力。我的学校离家里不是很近，所以我经常坐我爸妈的车去学校。</p>
+        <p>这就是我，你呢？</p>
+        <button id="toggle-button-cn">Switch to English Page</button>
+    </div>
+
+    <script>
+        const englishContent = document.querySelector('.english-content');
+        const chineseContent = document.querySelector('.chinese-content');
+        const toggleButtonEn = document.getElementById('toggle-button-en');
+        const toggleButtonCn = document.getElementById('toggle-button-cn');
+
+        toggleButtonEn.addEventListener('click', () => {
+            englishContent.style.display = 'none';
+            chineseContent.style.display = 'block';
+        });
+
+        toggleButtonCn.addEventListener('click', () => {
+            chineseContent.style.display = 'none';
+            englishContent.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
